@@ -11,7 +11,7 @@ import SwiftUI
 struct PetProjectNotebookApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Empty_Notes_and_Podcasts()
         }
     }
 }
