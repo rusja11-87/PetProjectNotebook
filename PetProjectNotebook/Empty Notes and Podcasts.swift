@@ -11,11 +11,11 @@ struct Empty_Notes_and_Podcasts: View {
     var body: some View {
         NavigationStack {
             TabView {
-                Image(.podcast)
+                PodcastsView()
                     .tabItem {
                         Image(.podcast)
                     }
-                Image(.note)
+                NotesView()
                     .tabItem {
                         Image(.note)
                         Text("Notes")
