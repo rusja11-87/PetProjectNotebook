@@ -32,5 +32,5 @@ struct PodcastsView: View {
 }
 
 #Preview {
-    PodcastsView()
+        PodcastsView()
 }

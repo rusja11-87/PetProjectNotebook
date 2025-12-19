@@ -7,19 +7,28 @@
 
 import SwiftUI
 
+enum Tab: String, Hashable {
+    case first = "Podcasts"
+    case second = "Notes"
+}
+
 struct Empty_Notes_and_Podcasts: View {
+    @State private var selectadTab: Tab = .first
     var body: some View {
         NavigationStack {
-            TabView {
+            TabView(selection: $selectadTab) {
                 PodcastsView()
                     .tabItem {
                         Image(.podcast)
+                        Text("Podcasts")
                     }
+                    .tag(Tab.first)
                 NotesView()
                     .tabItem {
                         Image(.note)
                         Text("Notes")
                     }
+                    .tag(Tab.second)
             }
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
@@ -29,6 +38,10 @@ struct Empty_Notes_and_Podcasts: View {
                         Image(.crown)
                     }
 
+                }
+                ToolbarItem(placement: .principal) {
+                    Text(selectadTab.rawValue)
+                        .font(.system(size: 22, weight: .semibold))
                 }
                 
                 ToolbarItem(placement: .topBarTrailing) {

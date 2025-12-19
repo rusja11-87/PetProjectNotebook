@@ -11,8 +11,6 @@ struct NotesView: View {
     var body: some View {
         VStack {
             Image(.notepad)
-                .navigationTitle(Text("Заметки"))
-                .navigationBarTitleDisplayMode(.inline)
                 .padding(.bottom, 30)
             Text("You don't have any notes yet")
                 .font(.system(size: 18, weight: .regular))
@@ -28,8 +26,6 @@ struct NotesView: View {
                             .foregroundStyle(.white)
                     }
             }
-
-                
         }
     }
 }
