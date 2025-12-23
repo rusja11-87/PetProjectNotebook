@@ -11,26 +11,23 @@ struct PodcastsView: View {
     var body: some View {
         VStack {
             Image(.microphone)
-                .padding(.bottom)
+                .padding(.bottom, 12)
             Text("You don't have any podcasts yet")
                 .font(.system(size: 18, weight: .regular))
-                .padding(.horizontal, 8)
+                .padding(.bottom, 12)
             Button {
                 //
             } label: {
-                RoundedRectangle(cornerRadius: 24)
+                Text("New Podcast")
+                    .foregroundStyle(.white)
                     .frame(width: 289, height: 54)
-                    .overlay {
-                        Text("New Podcast")
-                            .font(.system(size: 16, weight: .medium))
-                            .foregroundStyle(.white)
-                    }
+                    .background(.accent)
+                    .cornerRadius(24)
             }
-            .padding(12)
         }
     }
 }
 
 #Preview {
-    PodcastsView()
+        PodcastsView()
 }
