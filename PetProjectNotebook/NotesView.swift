@@ -11,20 +11,19 @@ struct NotesView: View {
     var body: some View {
         VStack {
             Image(.notepad)
-                .padding(.bottom, 30)
+                .padding(.bottom, 12)
             Text("You don't have any notes yet")
                 .font(.system(size: 18, weight: .regular))
-                .padding(.bottom, 30)
+                .padding(.bottom, 12)
             Button {
                 //
             } label: {
-                RoundedRectangle(cornerRadius: 24)
+                Text("New Note")
+                    .foregroundStyle(.white)
+                    .font(.system(size:16, weight: .medium))
                     .frame(width: 289, height: 54)
-                    .overlay {
-                        Text("New Note")
-                            .font(.system(size: 16, weight: .medium))
-                            .foregroundStyle(.white)
-                    }
+                    .background(.accent)
+                    .cornerRadius(24)
             }
         }
     }
