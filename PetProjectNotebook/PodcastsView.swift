@@ -11,10 +11,11 @@ struct PodcastsView: View {
     var body: some View {
         VStack {
             Image(.microphone)
-                .padding(.bottom, 12)
+                .padding(.bottom, 30)
             Text("You don't have any podcasts yet")
                 .font(.system(size: 18, weight: .regular))
-                .padding(.bottom, 12)
+                .padding(.horizontal, 10)
+                .padding(.bottom, 30)
             Button {
                 //
             } label: {
